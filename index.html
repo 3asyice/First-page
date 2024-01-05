@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  html, head {
+    height:100%;
+    background-color: black;
+    padding:30px;
+    min-width: 70%
+  }
+  nav {
+    background-color: #3333;
+    overflow: hidden;
+    float: right;
+    padding: 0;
+  }
+  
+  nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  nav a.active {
+    background-color: #000000;
+    color:#0fff00;
+  }
+  h1, p, a{
+    font-family: 'Times New Roman', Times, serif;
+    color:#0fff00;
+  }
+  
+  #Kevins-form {
+    display:none;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    color:#0fff00;
+    background-color: black;
+    padding:40px;
+    box-shadow: 0 4px 0 8px rgb(0, 0, 0, 0, 0, 1);
+    position:fixed;
+  }
+#backhome {
+     display: none;
+     top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+     color: #0fff00;
+     background-color: black;
+     padding: 40px;
+     box-shadow: 0 4px 0 8px rgb(0, 0, 0, 0, 0, 1);
+     position: fixed;
+   }
+</style>
+<body>
+  <nav>
+    <a href="#" onclick="show()">Home</a>
+  </nav>
+  <div>
+    <h1 id="fuck">Kevin's Website</h1>
+  </div>
+  
+  <div id="Kevins-form">
+    <a href="javascript:history.back()">Go Back</a>
+  <h1 id="close">Kevin's Diary</h1>
+  
+  
+  <p>I am a lonely man who has no shoulders to cry. I don't see the happiness in this planet. I got pretty hurt lately. There was a man I used to call him uncle, he almost killed me in Christmas Eve, also I got nine stitches up my head. I'm not complaining. Maybe I deserved all of that or even more worse than what happened that night.</p></div>
+  <script>
+  window.onload = function() {
+    document.getElementById('close').onclick = function() {
+      this.parentNode.parentNode.remove();
+      return false;
+    };
+  };
+  function show() {
+    document.getElementById('Kevins-form').style.display = 'block'
+  }
+  function back() {
+    document.getElementById('backhome').style.display = 'block'
+  }
+    
+  </script>>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
