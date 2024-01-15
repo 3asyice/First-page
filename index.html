@@ -1,1 +1,74 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="text/html;charset=UTF-8"/><link rel="stylesheet"href="style.css"><title>Login</title></head><style>body{background-color:rgba(53,53,53,1);}.center-div{background-color:rgba(0,0,0,1);color:rgba(0,255,16,1);text-align:center;margin:30px;padding:50px;border-radius:30px;}.pdn{margin:5px}.inp{background-color:rgba(121,121,121,1);margin:10px;padding:5px;border-radius: 6px;}.inpt{background-color:rgba(255,255,255,1);padding:5px;margin:5px;border-radius:6px;}.text{margin:10px;text-align:center;font-family:'Times New Roman',Times,serif;font-weight:bold;color:#0fff00;}</style><script>function verificarCredenciais(){var nomeUsuarioDigitado=document.getElementById('nomeUsuario').value;var senhaDigitada=document.getElementById('senha').value;if(nomeUsuarioDigitado==="Admin" && senhaDigitada==="admin"){window.location.href="https://3asyice.github.io/Website-on/";}else{alert("Usuário ou senha inválidos. Tente novamente.");}}</script><body><form class="center-div"><label for="nomeUsuario"class="text">NOME DE USUÁRIO:</label><input class="inp"type="text"id="nomeUsuario"name="nomeUsuario"required><br><label for="senha"class="text">SENHA:</label><input class="inp"type="password"id="senha"name="senha"required><br><input class="inpt"type="button"value="Login" onclick="verificarCredenciais()"></form></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="text/html;charset=UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <title>Login</title>
+</head>
+<style>
+  body {
+    background-color: rgba(53, 53, 53, 1);
+  }
+
+  .center-div {
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(0, 255, 16, 1);
+    text-align: center;
+    margin: 30px;
+    padding: 50px;
+    border-radius: 30px;
+  }
+
+  .pdn {
+    margin: 5px
+  }
+
+  .inp {
+    background-color: rgba(121, 121, 121, 1);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 6px;
+  }
+
+  .inpt {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 6px;
+  }
+
+  .text {
+    margin: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #0fff00;
+  }
+</style>
+<script>
+function login() {
+  // Lógica básica de autenticação
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  if (username === 'Admin' && password === 'admin') {
+    
+    // Armazene a informação de login (não seguro)
+    localStorage.setItem('loggedIn', 'true');
+    window.location.href = 'https://3asyice.github.io/Website-on/';
+  } else {
+    alert('Login falhou');
+  }
+}
+  
+</script>
+
+<body>
+  <form class="center-div"><label for="username" class="text">NOME DE USUÁRIO:</label><br><br><input class="inp" type="text" id="username" name="username" required><br><br><label for="password" class="text">SENHA:</label><br><input class="inp" type="password" id="password" name="password" required><br><br><input class="inpt" type="button" value="Login" onclick="login()"></form>
+</body>
+
+</html>
